@@ -48,6 +48,7 @@ import org.slf4j.LoggerFactory;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
+import static com.google.common.base.Strings.lenientFormat;
 
 /**
  * Directory {@link Cache}.
@@ -80,8 +81,8 @@ public class DirectoryCache
     if (!Files.exists(baseDir)) {
       Files.createDirectories(baseDir);
     }
-    else {
-      checkState(Files.isDirectory(baseDir), "Not a directory: %s", baseDir);
+    else if (!Files.isDirectory(baseDir)) {
+      throw new IllegalStateException(lenientFormat("Not a directory: %s", baseDir));
     }
 
     log.debug("Marshaller: {}", marshaller);

@@ -24,7 +24,7 @@
     <relativePath/>
   </parent>
 
-  <groupId>org.sonatype.ossindex</groupId>
+  <groupId>se.curity.org.sonatype.ossindex</groupId>
   <artifactId>ossindex-service</artifactId>
   <name>${project.groupId}:${project.artifactId}</name>
   <packaging>pom</packaging>
@@ -66,8 +66,8 @@
   </distributionManagement>
 
   <properties>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
 
     <build.notes>t:local, u:${user.name}</build.notes>
   </properties>
@@ -154,9 +154,9 @@
                 <requireMavenVersion>
                   <version>[3.3,)</version>
                 </requireMavenVersion>
-                <requireJavaVersion>
-                  <version>[1.7,)</version>
-                </requireJavaVersion>
+<!--                <requireJavaVersion>-->
+<!--                  <version>[1.8,)</version>-->
+<!--                </requireJavaVersion>-->
               </rules>
             </configuration>
           </execution>

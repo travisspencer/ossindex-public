@@ -95,7 +95,7 @@ class DirectoryCacheTest
       assert it == report
     }
 
-    displayDirectoryTree(baseDir)
+//    displayDirectoryTree(baseDir)
 
     underTest.purgeEntry(coordinates)
 
@@ -103,6 +103,6 @@ class DirectoryCacheTest
       assert it == null
     }
 
-    displayDirectoryTree(baseDir)
+//    displayDirectoryTree(baseDir)
   }
 }

@@ -16,9 +16,10 @@ import org.sonatype.ossindex.service.client.internal.Version;
 import org.sonatype.ossindex.service.client.transport.UserAgentBuilder.Product;
 
 import com.google.common.annotations.VisibleForTesting;
-import com.google.common.base.Supplier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.function.Supplier;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
@@ -28,7 +29,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * @since 1.0.0
  */
 public class UserAgentSupplier
-    implements Supplier<String>
+        implements Supplier<String>
 {
   private static final Logger log = LoggerFactory.getLogger(UserAgentSupplier.class);
 

@@ -18,7 +18,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.sonatype.ossindex</groupId>
+    <groupId>se.curity.org.sonatype.ossindex</groupId>
     <artifactId>ossindex-service</artifactId>
     <version>1.8.1</version>
   </parent>
@@ -62,7 +62,7 @@
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>29.0-android</version>
+        <version>31.0.1-jre</version>
       </dependency>
 
       <dependency>
@@ -128,13 +128,13 @@
       <!-- INTERNAL -->
 
       <dependency>
-        <groupId>org.sonatype.ossindex</groupId>
+        <groupId>se.curity.org.sonatype.ossindex</groupId>
         <artifactId>ossindex-service-api</artifactId>
         <version>1.8.1</version>
       </dependency>
 
       <dependency>
-        <groupId>org.sonatype.ossindex</groupId>
+        <groupId>se.curity.org.sonatype.ossindex</groupId>
         <artifactId>ossindex-service-client</artifactId>
         <version>1.8.1</version>
       </dependency>

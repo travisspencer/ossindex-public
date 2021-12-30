@@ -44,6 +44,7 @@ import org.slf4j.LoggerFactory;
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
+import static com.google.common.base.Strings.lenientFormat;
 import static org.sonatype.ossindex.service.api.componentreport.ComponentReportMediaTypes.REPORT_V1_JSON;
 import static org.sonatype.ossindex.service.api.componentreport.ComponentReportMediaTypes.REQUEST_V1_JSON;
 
@@ -205,8 +206,9 @@ public class OssindexClientImpl
     List<ComponentReport> reports = marshaller.unmarshal(response, LIST_COMPONENT_REPORT);
 
     // puke if the response does not contain the same number of entries as input request
-    checkState(reports.size() == coordinates.size(),
-        "Result size mismatch; expected: %s, have: %s", coordinates.size(), reports.size());
+    if (!(reports.size() == coordinates.size())) {
+      throw new IllegalStateException(lenientFormat("Result size mismatch; expected: %s, have: %s", coordinates.size(), reports.size()));
+    }
 
     // map coordinates to report
     Map<PackageUrl,ComponentReport> results = new HashMap<>(coordinates.size());

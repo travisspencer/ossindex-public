@@ -18,7 +18,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.sonatype.ossindex</groupId>
+    <groupId>se.curity.org.sonatype.ossindex</groupId>
     <artifactId>ossindex-service</artifactId>
     <version>1.8.1</version>
   </parent>
@@ -30,7 +30,7 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.sonatype.ossindex</groupId>
+        <groupId>se.curity.org.sonatype.ossindex</groupId>
         <artifactId>ossindex-service-bom</artifactId>
         <version>1.8.1</version>
         <type>pom</type>
@@ -41,7 +41,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.sonatype.ossindex</groupId>
+      <groupId>se.curity.org.sonatype.ossindex</groupId>
       <artifactId>ossindex-service-api</artifactId>
     </dependency>
 
@@ -69,6 +69,7 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
+      <version>31.0.1-jre</version>
     </dependency>
 
     <dependency>
@@ -122,25 +123,25 @@
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>enforce-classfileformat</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <byteCodeRule implementation="org.owasp.maven.enforcer.rule.ClassFileFormatRule">
-                  <supportedClassFileFormat>51</supportedClassFileFormat>
-                </byteCodeRule>
-              </rules>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>org.apache.maven.plugins</groupId>-->
+<!--        <artifactId>maven-enforcer-plugin</artifactId>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <id>enforce-classfileformat</id>-->
+<!--            <goals>-->
+<!--              <goal>enforce</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <rules>-->
+<!--                <byteCodeRule implementation="org.owasp.maven.enforcer.rule.ClassFileFormatRule">-->
+<!--                  <supportedClassFileFormat>51</supportedClassFileFormat>-->
+<!--                </byteCodeRule>-->
+<!--              </rules>-->
+<!--            </configuration>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
 
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
